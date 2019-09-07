@@ -1,0 +1,89 @@
+/* pages/collection/collection.wxss */
+.tabs{
+  display: flex;
+  align-items: center;
+  border-bottom: 1rpx solid #e7e7e7;
+  background: #fff;
+  position: fixed;
+  width: 100%;
+  top: 0
+}
+.tabs text{
+  width: 50%;
+  color: #999;
+  font-size: 30rpx;
+  text-align: center;
+  padding: 30rpx 0
+}
+.tabs text.active{
+  color: #509aff;
+  position: relative
+}
+.tabs text.active::after{
+  position: absolute;
+  width: 80%;
+  bottom: 0;
+  height: 4rpx;
+  background-color: #509aff;
+  left: 50%;
+  transform: translateX(-50%);
+  content: ''
+}
+
+.meet_box{
+  padding: 20rpx;
+}
+.meet_box .main{
+  border-radius: 10rpx;
+  display: block;
+  padding: 20rpx;
+  background: #fff;
+  margin-bottom: 22rpx
+}
+.meet_box li{
+  display: flex;
+  width: 100%;
+  align-items: center;
+  font-size: 24rpx;
+  color: #999;
+  line-height: 50rpx;
+}
+.meet_box li image{
+  width: 30rpx;
+  margin-right: 10rpx;
+}
+.meet_box .meet_tt{
+  font-size: 30rpx;
+  line-height: 50rpx;
+  color: #000
+}
+
+.all {
+  height: 100vh;
+  background: #f4f4f4;
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  width: 100%;
+  left: 0;
+}
+
+.shadow{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #f4f4f4;
+  z-index: 1
+}
+.mains{
+  position: absolute;
+  width: 100%;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 99;
+  padding-top: 100rpx
+}

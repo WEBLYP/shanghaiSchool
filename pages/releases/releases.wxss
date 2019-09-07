@@ -1,0 +1,110 @@
+/* pages/releases/releases.wxss */
+
+.headbg {
+  width: 100%;
+  position: relative;
+}
+
+.all {
+  height: 100vh;
+  background: #f4f4f4;
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  width: 100%;
+  left: 0;
+}
+
+.header .headimg {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 35rpx;
+}
+
+.header .main {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 20rpx;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  font-size: 30rpx;
+}
+
+.header {
+  position: relative;
+}
+
+.menu navigator image {
+  max-width: 70rpx;
+  max-height: 70rpx;
+}
+
+.menu navigator {
+  color: #fff;
+  font-size: 34rpx;
+  text-align: center;
+  width: 32%;
+  padding: 5% 0;
+  border-radius: 10rpx;
+  position: relative;
+}
+
+.menu navigator:nth-child(1) {
+  background-color: #f4334a;
+}
+
+.menu navigator:nth-child(2) {
+  background-color: #24a6d2;
+}
+
+.menu navigator:nth-child(3) {
+  background-color: #bbd82e;
+}
+
+.menu {
+  display: flex;
+  padding: 20rpx 10rpx;
+  justify-content: space-between;
+}
+
+.menu navigator .limit {
+  height: 70rpx;
+  margin-bottom: 30rpx;
+}
+
+.share {
+  background: #9ac5ff;
+  color: #fff;
+  width: 95%;
+  margin: 0 auto;
+  margin-top: 20rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 34rpx;
+  border-radius: 10rpx;
+  padding: 27rpx 0;
+}
+
+.share image {
+  max-width: 70rpx;
+}
+
+.getuserinfo {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 15rpx
+}
+.getuserinfo .headimg{
+  margin: 0
+}
+
+button{
+  padding: 0
+}

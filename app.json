@@ -1,0 +1,31 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/releases/zhaopin/index",
+    "pages/releases/huiyi/index",
+    "pages/releases/releases",
+    "pages/collection/collection",
+    "pages/LIS/lis",
+    "pages/query/query",
+    "pages/information/detail/index",
+    "pages/information/information",
+    "pages/recruitment/detail/index",
+    "pages/recruitment/recruitment",
+    "pages/meeting/meeting",
+    "pages/meeting/meetdetails/meetdetails",
+    "pages/information/detail/lianjie/index",
+    "pages/query/detail/index",
+    "pages/LIS/detail/index",
+    "pages/collection/detail/index",
+    "pages/releases/myfabu/index",
+    "pages/releases/tougao/index",
+    "pages/weblink/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#61a4ff",
+    "navigationBarTitleText": "图情招聘",
+    "navigationBarTextStyle": "white"
+  },
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,45 @@
+<!--pages/releases/zhaopin/index.wxml-->
+<!--pages/releases/huiyi/index.wxml-->
+<view class='all'>
+   <view class='top'>
+      <image class='icon' mode='widthFix' src='/static/img/fbzpimg.png'></image>
+      <text>发布招聘</text>
+   </view>
+
+   <view class='forms'>
+      <view class='list'>
+         <label>单位名称 <text class='must'>( 必填 )</text></label>
+         <input placeholder='' bindinput='getname' value='{{name}}'></input>
+         <label>用人部门 <text class='must'>( 必填 )</text></label>
+         <input placeholder='' bindinput='getjob' value='{{job}}'></input>
+         <label>学历要求 <text class='must'>( 必填 )</text></label>
+         <picker mode='selector' range="{{xuelis}}"  bindchange='xueli'><view>{{xueli}}</view></picker>
+         <label>专业方向 </label>
+         <input placeholder='请输入专业方向(多个用逗号隔开)' bindinput='getmajor' value='{{major}}'></input>
+         <label>工作地点 <text class='must'>( 必填 )</text></label>
+         <picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" data-city='{{multiArray[1][multiIndex[1]]}}' range="{{multiArray}}">
+          <view class="picker">
+            {{multiArray[1][multiIndex[1]]}}
+            <icon></icon>
+          </view>
+        </picker>
+         <label>官方链接 <text class='must'>( 必填 )</text></label>
+         <input placeholder='请输入官方链接' bindinput='geturl' value='{{url}}'></input>
+         <label>薪资范围</label>
+         <input placeholder='请输入薪资范围' bindinput='getmoney' value='{{money}}'></input>
+         <label>截止日期</label>
+         <picker mode='date'   bindchange='getdate'><view>{{date}}</view></picker>
+         <label>岗位描述</label>
+         <textarea placeholder='请输入工作内容' bindinput='workcontent'></textarea>
+         <label>发布配图</label>
+         <view class='photo'>
+              <image class='btn'  mode='widthFix' bindtap='addpng' src='{{pngs?pngs:"/static/img/add.png"}}'></image>
+         </view>
+         <button class='confirm'  bindtap='confirm'>确定</button>
+      </view>
+   </view>
+
+</view>
+<view class='home' bindtap='backhome'>
+  <image src='/static/img/icon9.png'></image>
+</view>

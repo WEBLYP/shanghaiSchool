@@ -1,0 +1,39 @@
+<!--pages/information/information.wxml-->
+<!--pages/recruitment/recruitment.wxml-->
+<!--pages/meeting/meeting.wxml-->
+<div class='all'>
+  <view class='shadow'></view>
+  <view class='main'>
+     <view class='header'>
+    <image class='headbg' src='/static/img/bg_02.png'></image>
+    <view class='search'>
+      <!-- <image class='searchimg' src='/static/img/icon10.png' bindtap='searchtext'></image> -->
+      <input type='text' placeholder='关键词查询' bindinput='getext' confirm-type='search' bindconfirm='searchtext'></input>
+    </view>
+  </view>
+
+  <ul class='lists'>
+    <li wx:if="{{flag==0}}" wx:for='{{lists}}' wx:key='{index}' bindtap='godetail' data-id='{{item.id}}'>
+      <!-- <navigator url="./detail/index?id={{item.id}}"> -->
+      <view class='limit'>
+        <image mode='widthFix' src='{{item.img1?item.img1:"/static/img/zixun.png"}}' alt='{{item.img1}}'></image>
+      </view>
+      <text>{{item.title?item.title:"loading..."}}</text>
+      <!-- </navigator> -->
+    </li>
+    <li wx:if="{{flag==1}}" wx:for='{{lists1}}' wx:key='{index}' bindtap='godetail' data-id='{{item.id}}'>
+      <!-- <navigator url="./detail/index?id={{item.id}}"> -->
+      <view class='limit'>
+        <image mode='widthFix' src='{{item.img1?item.img1:"/static/img/zixun.png"}}' alt='{{item.img1}}'></image>
+      </view>
+      <text>{{item.title?item.title:"loading..."}}</text>
+      <!-- </navigator> -->
+    </li>
+  </ul>
+  </view>
+
+</div>
+
+<view class='home' bindtap='backhome'>
+  <image src='/static/img/icon9.png'></image>
+</view>

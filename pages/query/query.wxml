@@ -1,0 +1,65 @@
+<!--pages/query/query.wxml-->
+<!--pages/information/information.wxml-->
+<!--pages/recruitment/recruitment.wxml-->
+<!--pages/meeting/meeting.wxml-->
+<div class='all'>
+  <view class='header'>
+    <!-- <image class='headbg' src='/static/img/querybg.png'></image> -->
+    <view class='title'>
+      <text>{{year}}</text>
+      <view>核心期刊论文查询</view>
+    </view>
+    <view class='search'>
+      <!-- <image class='searchimg' src='/static/img/icon10.png' bindtap='searchtext'></image> -->
+      <input type='text' placeholder='关键词查询' bindinput='getext' value='{{hotext}}' confirm-type='search' bindconfirm='searchtext'></input>
+    </view>
+    <view class='hot' wx:if='{{false}}'>
+      <text>热门标签：</text>
+      <ul>
+        <li wx:for='{{hotdata}}' wx:key='index' bindtap='pulls' data-hot='{{item.title}}'> {{item.title}} </li>
+      </ul>
+    </view>
+  </view>
+
+  <view class='lists'>
+    <view class='top'>
+      <text>期刊名</text>
+      <text>级别</text>
+      <text>影响因子</text>
+      <text>分区</text>
+      <text>其他</text>
+    </view>
+  </view>
+
+  <ul class='alldata' wx:if="{{!key}}">
+    <li wx:for='{{list}}' wx:key='index' data-url='{{item.linkurl}}' >
+
+      <text>{{item.title}}</text>
+      <text>{{item.ftitle}}</text>
+      <text>{{item.price}}</text>
+      <text>{{item.linkurl}}</text>
+      <text>{{item.description}}</text>
+
+    </li>
+  </ul>
+
+  <ul class='alldata' wx:if="{{key}}">
+    <li wx:for='{{list1}}' wx:key='index' data-url='{{item.linkurl}}' >
+
+      <text>{{item.title}}</text>
+      <text>{{item.ftitle}}</text>
+      <text>{{item.price}}</text>
+      <text>{{item.linkurl}}</text>
+      <text>{{item.description}}</text>
+    </li>
+  </ul>
+
+  <view class='nodata' wx:if="{{list.length == 0  && wancheng}}">
+    <image mode='widthFix' src='/static/img/nodata.png'></image>
+    暂无内容
+  </view>
+</div>
+
+<view class='home' bindtap='backhome'>
+  <image src='/static/img/icon9.png'></image>
+</view>

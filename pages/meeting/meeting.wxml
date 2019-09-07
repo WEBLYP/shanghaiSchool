@@ -1,0 +1,72 @@
+<!--pages/meeting/meeting.wxml-->
+<div class='all'>
+  <view class='shadow'></view>
+  <view class='main'>
+    <view class='header'>
+      <image class='headbg' src='/static/img/bg_02.png'></image>
+      <view class='search'>
+        <!-- <image class='searchimg' src='/static/img/icon10.png' bindtap='searchtext'></image> -->
+        <input type='text' placeholder='会议搜索' bindinput='getext' value='{{hotitem}}' confirm-type='search' bindconfirm='searchtext'></input>
+        <text class='hot'>热门标签：</text>
+        <text bindtap='writehot' class='hot' wx:for='{{hot}}' wx:key='{{index}}' wx:item='{{item}}' data-hot="{{item.title}}">{{item.title}} </text>
+      </view>
+    </view>
+
+    <view class='meet_con'>
+      <view class='meet_title {{flag==2?"hide":""}}'>
+        <text class="{{flag==0?'active':'none'}}" bindtap='tabs' data-index='0'>全部会议</text>
+        <text class="{{flag==1?'active':'none'}}" bindtap='tabs' data-index='1'>已截止</text>
+      </view>
+
+      <view wx:if='{{flag==0}}' class='meet_box' catchtap="onDetailTap" wx:for='{{list}}' wx:key="{{index}}" data-id='{{item.id}}'>
+        <ul>
+          <li class="meet_tt">{{item.title}}</li>
+          <li>
+            <image src='/static/img/rl.png'></image>{{item.endtime}}</li>
+          <li>
+            <image src='/static/img/adress.png'></image>{{item.ftitle}}</li>
+          <li>
+            <image src='/static/img/adss.png'></image>{{item.linkurl}}</li>
+          <li>
+            <image src='/static/img/bq.png'></image>{{item.introduce}}</li>
+        </ul>
+      </view>
+
+      <view wx:if='{{flag==1}}' class='meet_box' catchtap="onDetailTap" wx:for='{{list1}}' wx:key="{{index}}" data-id='{{item.id}}'>
+        <ul>
+          <li class="meet_tt">{{item.title}}</li>
+          <li>
+            <image src='/static/img/rl.png'></image>{{item.endtime}}</li>
+          <li>
+            <image src='/static/img/adress.png'></image>{{item.ftitle}}</li>
+          <li>
+            <image src='/static/img/adss.png'></image>{{item.linkurl}}</li>
+          <li>
+            <image src='/static/img/bq.png'></image>{{item.introduce}}</li>
+        </ul>
+      </view>
+
+      <view wx:if='{{flag==2}}' class='meet_box' catchtap="onDetailTap" wx:for='{{list2}}' wx:key="{{index}}" data-id='{{item.id}}'>
+        <ul>
+          <li class="meet_tt">{{item.title}}</li>
+          <li>
+            <image src='/static/img/rl.png'></image>{{item.endtime}}</li>
+          <li>
+            <image src='/static/img/adress.png'></image>{{item.ftitle}}</li>
+          <li>
+            <image src='/static/img/adss.png'></image>{{item.linkurl}}</li>
+          <li>
+            <image src='/static/img/bq.png'></image>{{item.introduce}}</li>
+        </ul>
+      </view>
+
+      <view class='nodata meet_box' wx:if='{{list.length==0 && wancheng && flag ==0 && page ==1}}'>暂无数据 </view>
+      <view class='nodata meet_box' wx:if='{{list1.length==0 && wancheng1 && flag ==1 && page1 == 1}}'>暂无数据 </view>
+      <view class='nodata meet_box' wx:if='{{list2.length==0 && wancheng2 && flag ==2 && page2 == 1}}'>暂无数据 </view>
+    </view>
+  </view>
+</div>
+
+<view class='home' bindtap='backhome'>
+    <image src='/static/img/icon9.png'></image>
+</view>

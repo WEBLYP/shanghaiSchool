@@ -1,0 +1,128 @@
+/* pages/meeting/meeting.wxss */
+.header{
+   box-sizing: border-box;
+   position: relative;
+   width: 100%;
+   overflow: hidden
+}
+.header image{ width: 100%;
+  max-height: 250rpx;
+  }
+.header .search{
+  position: absolute;
+  top: 30rpx;
+  width: 90%;
+  left: 5%;
+ 
+}
+.header .search input{
+height: 80rpx;
+background-color: #fff;
+border-radius:40rpx;
+font-size: 30rpx;
+color: #999;
+line-height: 80rpx;
+padding-left: 30rpx 
+}
+.header .search image.searchimg{
+  width:50rpx;
+  height: 50rpx;
+  position: absolute;
+  right: 6%;
+  top: 15rpx;
+  z-index: 666666;
+  cursor: pointer 
+}
+.header .search text{
+  color: #fff;
+  font-size: 30rpx;
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+  margin-top: 10rpx;
+  margin-right: 10rpx
+}
+
+.meet_con{
+  width: 100%;
+}
+.meet_con .meet_title{
+  display: flex;
+  flex-direction:row;
+  align-items: center;
+  background: #fff;
+  justify-content: space-between;
+  margin-bottom: 20rpx
+
+}
+.meet_con .meet_title text{
+  height: 90rpx;
+  line-height: 90rpx;
+  color: #999;
+  font-size: 30rpx;
+  width: 50%;
+  text-align: center;
+  border-bottom: 4rpx solid transparent;
+}
+.meet_con .meet_title text.active{
+  border-bottom: 4rpx solid #9bc1f3;
+  color: #9bc1f3;
+}
+.meet_con .meet_box{
+  height: auto;
+  margin: 0 20rpx;
+  background: #fff;
+  padding: 22rpx;
+  margin-bottom: 20rpx
+
+}
+.meet_con .meet_box ul li{
+  height: 60rpx;
+  line-height: 60rpx;
+  display: block;
+  color: #999;
+  font-size: 24rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis
+}
+.meet_con .meet_box ul li image{width: 30rpx;height: 30rpx;margin-right: 10rpx;vertical-align: middle;}
+.meet_con .meet_box ul .meet_tt{color: #333;font-size: 30rpx;}
+.all{
+  background: #f4f4f4;
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  width: 100%;
+  left: 0;
+  right: 0;
+}
+.shadow{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #f4f4f4;
+  z-index: 1
+}
+.main{
+  position: absolute;
+  width: 100%;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 99
+}
+
+.hot{
+  display: inline-block !important;
+  font-size: 30rpx !important;
+  padding-right: 15rpx;
+  padding: 40rpx 0
+}
+
+.hide{
+  display: none !important
+}

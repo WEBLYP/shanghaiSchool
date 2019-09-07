@@ -1,0 +1,43 @@
+<!--pages/meeting/meetdetails/meetdetails.wxml-->
+<div class='all' wx:if="{{detail.title}}">
+  <text class='meet_tt'>{{detail.title}}</text>
+  <view class='details'>
+    <ul class=''>
+      <li>
+        <image class='icon' src='/static/img/bq.png'></image><text>标签：</text> <text space="nbsp" wx:for='{{tags}}'>{{item}}  </text> </li>
+      <li>
+        <image class='icon' src='/static/img/rl.png'></image>{{detail.endtime}}</li>
+      <li>
+        <image class='icon' src='/static/img/adress.png'></image>{{detail.ftitle}}</li>
+      <li>
+        <image class='icon' src='/static/img/zbf.png'></image>主办方：{{detail.price}}</li>
+      <li>
+        <image class='icon' src='/static/img/adss.png'></image>{{detail.linkurl}}</li>
+    </ul>
+    <ul>
+      <li>
+        <image class='icon' src='/static/img/conimg.png'></image>会议内容</li>
+      <li>
+        <view>{{detail.content?detail.content:"暂无内容"}}</view>
+      </li>
+    </ul>
+
+    <ul>
+      <li bindtap='collect' data-id='0' wx:if='{{flag==0}}'>
+        <image class='icon' src='/static/img/scimg.png'></image>收藏</li>
+      <li bindtap='collect' data-id='1' wx:if='{{flag==1}}'>
+        <image class='icon' src='/static/img/scimg1.png'></image>已收藏</li>
+      <li bindtap='link' data-url='{{detail.linkurl}}'>
+        <image class='icon' src='/static/img/fblj.png'></image>复制链接</li>
+    </ul>
+  </view>
+
+  <button class='share' open-type="share" app-parameter="wechat" binderror="launchAppError" bindtap='share'>分享</button>
+
+  <view class='home'>
+    <navigator url='/pages/index/index'>
+      <image src='/static/img/icon9.png'></image>
+    </navigator>
+  </view>
+
+</div>

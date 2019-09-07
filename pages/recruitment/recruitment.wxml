@@ -1,0 +1,102 @@
+<!--pages/recruitment/recruitment.wxml-->
+<!--pages/meeting/meeting.wxml-->
+<div class='all'>
+  <view class='shadow'></view>
+
+  <view class='main'>
+    <view class='header'>
+      <image class='headbg' src='/static/img/bg_02.png'></image>
+      <view class='search'>
+        <!-- <image class='searchimg' src='/static/img/icon10.png' bindtap='searchtext'></image> -->
+        <input type='text' placeholder='招聘搜索' bindinput='getext' confirm-type='search' bindconfirm='searchtext'></input>
+      </view>
+    </view>
+
+    <view class='meet_con'>
+      <view class='meet_title'>
+        <picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcancel='citycancel'  bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" data-city='{{multiArray[1][multiIndex[1]]}}' range="{{multiArray}}">
+          <view class="picker">
+            {{multiArray[1][multiIndex[1]]}}
+            <icon></icon>
+          </view>
+        </picker>
+        <picker bindchange="bindRegionChange1" mode='selector' data-index='1' range="{{array1}}">
+          <view class="picker">
+            {{date?date:'时间排序'}}
+            <icon></icon>
+          </view>
+        </picker>
+        <picker bindchange="bindRegionChange2" mode='selector' data-index='2' range="{{array}}">
+          <view class="picker">
+            {{education?education:'学历'}}
+            <icon></icon>
+          </view>
+        </picker>
+      </view>
+
+      <view wx:if='{{flag==0}}' class='meet_box zhaopin' catchtap="onDetailTap" data-id='{{item.id}}' wx:for='{{lists}}' wx:key='{{index}}'>
+        <ul>
+          <li class="meet_tt">
+            <image class='' src='{{item.img1?item.img1:"/static/img/jigou.png"}}'></image>
+            <text class='xueli'>{{item.ftitle}}</text>
+            <text class='money'>{{item.author?item.author:''}}</text>
+          </li>
+          <li class='timend' wx:if='{{item.isend==1}}'>已过期</li>
+          <li class='timend' wx:if='{{item.isend!=1}}'>招聘中</li>
+          <li class='zhiwei'>
+            {{item.title}}
+          </li>
+          <li class='yaoqiu'>
+            <text>{{item.price}}</text>
+            <text>最低学历：{{item.linkurl}}</text>
+            <text>截止日期：{{item.endtime}}</text>
+          </li>
+        </ul>
+      </view>
+
+      <view wx:if='{{flag==1}}' class='meet_box zhaopin {{item.isend==1?"end":""}}' catchtap="onDetailTap" data-id='{{item.id}}' wx:for='{{lists1}}' wx:key='{{index}}'>
+        <ul>
+          <li class="meet_tt">
+            <image class='' src='{{item.img1?item.img1:"/static/img/jigou.png"}}'></image>
+            <text class='xueli'>{{item.ftitle}}</text>
+            <text class='money'>{{item.author?item.author:''}}</text>
+          </li>
+          <li class='timend' wx:if='{{item.isend==1}}'>已过期</li>
+          <li class='timend' wx:if='{{item.isend!=1}}'>招聘中</li>
+          <li class='zhiwei'>
+            {{item.title}}
+          </li>
+          <li class='yaoqiu'>
+            <text>{{item.price}}</text>
+            <text>最低学历：{{item.linkurl}}</text>
+            <text>截止日期：{{item.endtime}}</text>
+          </li>
+        </ul>
+      </view>
+
+
+      <view wx:if='{{flag==2}}' class='meet_box zhaopin' catchtap="onDetailTap" data-id='{{item.id}}' wx:for='{{lists2}}' wx:key='{{index}}'>
+        <ul>
+          <li class="meet_tt">
+            <image class='' src='{{item.img1?item.img1:"/static/img/jigou.png"}}'></image>
+            <text class='xueli'>{{item.ftitle}}</text>
+            <text class='money'>{{item.author?item.author:'?'}}</text>
+          </li>
+          <li class='zhiwei'>
+            {{item.title}}
+          </li>
+          <li class='yaoqiu'>
+            <text>{{item.price}}</text>
+            <text>最低学历：{{item.linkurl}}</text>
+            <text>截止日期：{{item.endtime}}</text>
+          </li>
+        </ul>
+      </view>
+
+    </view>
+  </view>
+</div>
+
+<view class='home' bindtap='backhome'>
+  <image src='/static/img/icon9.png'></image>
+</view>

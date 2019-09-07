@@ -1,0 +1,73 @@
+<!--index.wxml-->
+<view class='tag' wx:if='{{addd}}'>
+   <image mode='widthFix' src='/static/img/addd.png'></image>
+   点击...添加至我的小程序 <image  mode='widthFix' class='close' src='/static/img/close.png' bindtap='closeaddd'></image>
+</view>
+<view class="all">
+  <view class='header'>
+    <image mode='widthFix' class='headbg' src='/static/img/bg_02.png'></image>
+    <view class='headtitle'>图情招聘</view>
+    <view class='headtxet'>立足招聘，面向行业</view>
+  </view>
+  <view class='con'>
+    <view class='con_box1'>
+      <view class='hy' catchtap="onDetailTap1">
+        <view class='limit'>
+          <image mode='widthFix' src='/static/img/icon_richeng.png'></image>
+        </view>
+        <text>会议</text>
+      </view>
+      <view class='zp' catchtap="onDetailTap2">
+        <view class='limit'>
+          <image mode='widthFix' src='/static/img/icon.png'></image>
+        </view>
+        <text>招聘</text>
+      </view>
+      <view class='zx' catchtap="onDetailTap3">
+        <view class='limit'>
+          <image mode='widthFix' src='/static/img/icon2.png'></image>
+        </view>
+        <text>科研/资讯</text>
+      </view>
+    </view>
+    <view class='con_box2'>
+      <view class='dc' catchtap="onDetailTap4">
+        <image mode='widthFix' src='/static/img/icon4.png'></image>
+        <text>期刊查询</text>
+      </view>
+      <view class='zs' catchtap="onDetailTap5">
+        <image mode='widthFix' src='/static/img/icon5.png'></image>
+        <text>LIS指数</text>
+      </view>
+    </view>
+    <view class='con_box3'>
+      <view class='fb' catchtap="onDetailTap6">
+        <view class='limit'>
+          <image mode='widthFix' src='/static/img/icon6.png'></image>
+        </view>
+        <text>我要发布</text>
+      </view>
+      <view class='sc' catchtap="onDetailTap7">
+        <view class='limit'>
+          <image mode='widthFix' src='/static/img/icon7.png'></image>
+        </view>
+        <text>个人收藏</text>
+      </view>
+    </view>
+    
+    <view class='reward'>
+      <!-- <image bindtap='shang' mode='widthFix' src='/static/img/shang.png'></image> -->
+      <text bindtap='shang'>捐赠</text>
+    </view>
+
+    <view class='rewardimg' wx:if='{{flag}}'>
+       <view class='limit'>
+         <text class='title'>{{prize.title}}</text>
+         <image class='imgs' mode='widthFix' src='{{prize.wechat}}'></image>
+         <view class='link' bindtap='link' data-zh='{{prize.description}}'>{{prize.description}} <text>(点击可复制支付宝账号)</text></view>
+         <image class='close' mode='widthFix' src='/static/img/close.png' bindtap='close'></image>
+       </view>
+    </view>
+    
+  </view>
+</view>

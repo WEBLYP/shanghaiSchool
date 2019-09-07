@@ -1,0 +1,8 @@
+{
+  
+  "backgroundTextStyle": "light",
+  "navigationBarBackgroundColor": "#61a4ff",
+  "navigationBarTitleText": "会议",
+  "navigationBarTextStyle": "white",
+  "enablePullDownRefresh": true
+}

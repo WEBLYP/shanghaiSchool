@@ -1,0 +1,43 @@
+<!--pages/releases/releases.wxml-->
+<view class='all' wx:if="{{load}}">
+
+  <view class='header'>
+    <image class='headbg' mode='widthFix' src='/static/img/bg_02.png'></image>
+    <view class='main'>
+      <button class='getuserinfo' open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="getUserInfo" wx:if='{{!hasUserInfo}}'>
+        <image class='headimg' src='/static/img/default.png'></image>
+      </button>
+      <image wx:if="{{hasUserInfo}}" class='headimg' src='{{shcj.HeadPortrait?shcj.HeadPortrait:"/static/img/default.png"}}'></image>
+      <text>{{shcj.nickname?shcj.nickname:'点击头像登录'}}</text>
+    </view>
+  </view>
+
+  <view class='menu'>
+    <navigator url='./huiyi/index'>
+      <view class='limit'>
+        <image mode='widthFix' src='/static/img/write.png'></image>
+      </view>
+      <view>发布会议</view>
+    </navigator>
+    <navigator url='./zhaopin/index'>
+      <view class='limit'>
+        <image mode='widthFix' src='/static/img/fabuzhaopin.png'></image>
+      </view>
+      <view>发布招聘</view>
+    </navigator>
+    <navigator url='./tougao/index'>
+      <view class='limit'>
+        <image mode='widthFix' src='/static/img/tougao.png'></image>
+      </view>
+      <view>投稿/留言</view>
+    </navigator>
+  </view>
+
+  <navigator class='share' url='./myfabu/index'>
+    <image mode='widthFix' src='/static/img/shenhe.png'></image> 我的发布</navigator>
+
+</view>
+
+<view class='home' bindtap='backhome'>
+  <image src='/static/img/icon9.png'></image>
+</view>

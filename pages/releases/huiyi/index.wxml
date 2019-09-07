@@ -1,0 +1,27 @@
+<!--pages/releases/huiyi/index.wxml-->
+<view class='all'>
+   <view class='top'>
+      <image class='icon' mode='widthFix' src='/static/img/tximg.png'></image>
+      <text>发布会议</text>
+   </view>
+
+   <view class='forms'>
+      <view class='list'>
+         <label>会议网址 <text class='must'>( 必填 )</text></label>
+         <input placeholder='请输入有效会议网址' bindinput='geturl' value='{{url}}'></input>
+         <label>会议名称 <text class='must'>( 必填 )</text></label>
+         <input placeholder='请输入会议名称' bindinput='getname' value='{{name}}'></input>
+         <label>会议类型</label>
+         <picker mode='selector' range="{{types}}" data-id='{{types[2][id]}}' range-key="{{'title'}}"  bindchange='huiyi'><view>{{type}}</view></picker>
+         <label>会议地点</label>
+         <input placeholder='请输入会议地点' bindinput='getplace'></input>
+         <label>会议日期</label>
+         <picker mode='date'   bindchange='getdate'><view>{{date}}</view></picker>
+         <button class='confirm'  bindtap='confirm'>确定</button>
+      </view>
+   </view>
+
+</view>
+<view class='home' bindtap='backhome'>
+  <image src='/static/img/icon9.png'></image>
+</view>

@@ -1,0 +1,351 @@
+/* pages/query/query.wxss */
+/* pages/information/information.wxss */
+/* pages/meeting/meeting.wxss */
+
+.header {
+  box-sizing: border-box;
+  position: relative;
+  width: 100%;
+}
+
+.header image {
+  width: 100%;
+}
+
+.header .search {
+  position: absolute;
+  top: 60%;
+  width: 90%;
+  left: 50%;
+  transform: translate(-50%, -30%);
+}
+
+.header .search input {
+  height: 80rpx;
+  background-color: #fff;
+  border-radius: 40rpx;
+  font-size: 30rpx;
+  color: #999;
+  line-height: 80rpx;
+  padding-left: 30rpx;
+}
+
+.header .search image.searchimg {
+  width: 50rpx;
+  height: 50rpx;
+  position: absolute;
+  right: 6%;
+  top: 15rpx;
+  z-index: 666666;
+  cursor: pointer
+}
+
+.header .search text {
+  color: #fff;
+  font-size: 20rpx;
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+  margin-top: 10rpx;
+}
+
+.meet_con {
+  width: 100%;
+}
+
+.meet_con .meet_title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background: #fff;
+  justify-content: space-between;
+  margin-bottom: 20rpx;
+}
+
+.meet_con .meet_title text {
+  height: 90rpx;
+  line-height: 90rpx;
+  color: #999;
+  font-size: 30rpx;
+  width: 50%;
+  text-align: center;
+  border-bottom: 4rpx solid transparent;
+}
+
+.meet_con .meet_title text.active {
+  border-bottom: 4rpx solid #9bc1f3;
+  color: #9bc1f3;
+}
+
+.meet_con .meet_box {
+  height: auto;
+  margin: 0 20rpx;
+  background: #fff;
+  padding: 22rpx;
+  margin-bottom: 20rpx;
+}
+
+.meet_con .meet_box ul li {
+  line-height: 40rpx;
+  display: block;
+  color: #999;
+  font-size: 24rpx;
+}
+
+.meet_con .meet_box ul li image {
+  width: 30rpx;
+  height: 30rpx;
+  margin-right: 10rpx;
+  vertical-align: middle;
+}
+
+.meet_con .meet_box ul .meet_tt {
+  color: #333;
+  font-size: 30rpx;
+}
+
+.all {
+  height: 100vh;
+  background: #f4f4f4;
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  width: 100%;
+  left: 0;
+}
+
+.meet_title picker {
+  font-size: 26rpx;
+  padding: 30rpx 0;
+  text-align: center;
+  width: 33%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.meet_title picker icon {
+  width: 26rpx;
+  height: 14rpx;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAKCAYAAABWiWWfAAAA90lEQVQokZXSvytFcRjH8ZfjDsrgx6CcQZmst84oRUrMYpPuqNyF4S4GFmExkCILKYPcLmFSFguTv8FiMDIoJcP53jqdjpv7GZ/P83l/n6fn25EkyQveMIdP7asLJyhHeMQ0LtHXJqgbZ5jHU4RlbGMKDQz8E9SDc8ziEJXOOI7hHiUsYAy3Wq/ciwvMYC8M9NOEwQO+sYiJAPwoAPWjjknsYLVpRLnGTawgwQ2Gc/4grjGODdSyZh4Gu6iijDuMhPpQeGAUa1jPB7NrZvUs/S4V6WFecRAmrmGrKFQqKgYd4QvHuAq1Kvb/ChStmdWp9CDvWGoFgl8XGCz3Il6R6wAAAABJRU5ErkJggg==)no-repeat;
+  background-size: 100%;
+}
+
+/* .meet_title picker.active icon {
+  width: 26rpx;
+  height: 12rpx;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAKCAYAAABWiWWfAAAA8ElEQVQokZXQvyuFURzH8dfjXkrdf8Dzb5zBouxSfmQx6GaRpMTAYJEsVqRMYqGkhI2iZCTrnZSRAaGUxXDPU7cn9z7XZzrn9Dnv77tvEkJQkGmsYg4HrYrlAtAsNuN5D53Yb1buaAFajKA7DOExAqf+a7aMNdxjFE+o4QQ76MJWO2YrEXSLwQgSYQN4iMbz+Y+lNE0b7+vR6hojeMn133COfkziBzd5WIINLOACY3j9wxo+cIo+VNVXdZXBStjGDM4wjvcmoCyfsduLCXTjsozd+HAcJ30VgLI8YxiHWEIlCSHU1JdaxXeboMZUcISeXyT0Mm+CXXBoAAAAAElFTkSuQmCC)no-repeat;
+  background-size: 100%;
+} */
+
+.meet_title picker view {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.meet_title picker icon {
+  margin-left: 10rpx;
+}
+
+.zhaopin .meet_tt image {
+  width: 80rpx !important;
+  height: 80rpx !important;
+}
+
+.zhaopin .meet_tt {
+  display: flex !important;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.zhaopin .meet_tt .xueli {
+  flex: 1;
+  margin-left: 15rpx;
+}
+
+.zhaopin .meet_tt {
+  font-size: 30rpx;
+}
+
+.zhaopin .meet_tt .money {
+  font-size: 24rpx;
+  color: #61a4ff;
+}
+
+.zhaopin .zhiwei {
+  font-size: 24rpx;
+  color: #333 !important;
+  line-height: inherit !important;
+  padding: 30rpx 0 20rpx 0;
+}
+
+ul {
+  overflow: hidden;
+  display: block;
+}
+
+.zhaopin  .yaoqiu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.zhaopin  .yaoqiu text {
+  padding: 0 20rpx;
+  position: relative;
+}
+
+.zhaopin  .yaoqiu text::after {
+  position: absolute;
+  content: '';
+  right: 0;
+  height: 100%;
+  width: 2rpx;
+  background: #999;
+  top: 0;
+}
+
+.zhaopin  .yaoqiu text:last-child::after {
+  display: none;
+}
+
+
+ul.lists{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20rpx;
+}
+
+ul.lists li{
+  width: 50%;
+  background: #fff;
+  border-radius: 10rpx;
+  overflow: hidden;
+  font-size: 24rpx;
+  color: #333;
+  text-align: center
+}
+
+ul.lists li .limit{
+  overflow: hidden;
+  position: relative;
+  height: 0;
+  padding: 35% 0;
+  background-color: #9bc1f3;
+  text-align: center
+}
+
+ul.lists li .limit image{
+  position: relative;
+  max-width: 80%;
+  max-height: 100%;
+  overflow: hidden;
+  margin-top: -50%
+}
+
+ul.lists li text{
+  padding: 22rpx;
+  display: block
+}
+
+.header{
+  height: 0;
+  padding: 20% 0;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  background-color: #68a8ff
+}
+
+.header .headbg{
+  width: 100%;
+  display: block;
+  margin-top: -50%;
+}
+
+.header .title{
+  position: absolute;
+  left: 50%;
+  top: 30%;
+  color: #fff;
+  font-size: 34rpx;
+  text-align: center;
+  transform: translate(-50%,-70%)
+}
+
+.header .hot{
+  position: absolute;
+  color: #fff;
+  font-size: 30rpx;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 40rpx 0
+}
+
+.all .alldata{
+
+}
+.lists{
+  margin-top: 20rpx
+}
+
+.lists .top{
+  display: flex;
+  align-items:0 center;
+  background: #fff;
+}
+
+.lists .top text{
+  display: block;
+  width: 25%;
+  text-align: center;
+  font-size: 24rpx;
+  font-weight: bold;
+  padding: 30rpx 0
+}
+
+.alldata li{
+  display: flex;
+  align-items: center;
+  border-top: 1rpx solid #999;
+  background: #fff
+}
+
+.alldata li text{
+  width: 20%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  text-align: center;
+  font-size: 24rpx;
+  padding: 30rpx 0
+}
+
+
+.alldata li navigator{
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between
+}
+
+.nodata image{
+  display: block;
+  margin: 0 auto;
+  width: 30%;
+  height: auto
+}
+.nodata{
+  padding: 100rpx 0;
+  text-align: center;
+  font-size: 30rpx;
+  color: #999;
+  line-height: 150rpx
+}

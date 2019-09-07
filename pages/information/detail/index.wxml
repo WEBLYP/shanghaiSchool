@@ -1,0 +1,25 @@
+<!--pages/information/detail/index.wxml-->
+<view class='all'>
+   <rich-text nodes="{{article}}" />
+</view>
+
+<ul class='bottom'>
+
+  <li bindtap='backhome'>
+    <image src='/static/img/shouye.png'></image>
+    首页
+  </li>
+
+  <li>
+    <button open-type="share">
+      <image src='/static/img/share.png'></image>
+      分享
+    </button>
+  </li>
+
+  <li bindtap='link' data-url='{{linkurl}}'>
+    <image src='/static/img/lianjie.png'></image>
+    链接
+  </li>
+
+</ul>

@@ -1,0 +1,59 @@
+<!--pages/recruitment/detail/index.wxml-->
+<!--pages/recruitment/recruitment.wxml-->
+<!--pages/meeting/meeting.wxml-->
+<div class='all'>
+  <view class='meet_con'>
+
+    <view class='meet_box zhaopin' catchtap="onDetailTap" data-id='1'>
+      <ul>
+        <li class="meet_tt">
+          <image mode='widthFix' class='' src='{{detail.img1}}'></image>
+          <text class='xueli'>{{detail.ftitle}}</text>
+          <text class='money'>{{detail.author}}</text>
+        </li>
+        <li class='zhiwei'>
+          {{detail.title}}
+        </li>
+        <li class='yaoqiu'>
+          <text>{{detail.price}}</text>
+          <text>最低学历：{{detail.linkurl}}</text>
+          <text>截止日期：{{detail.endtime}}</text>
+        </li>
+      </ul>
+    </view>
+
+  </view>
+
+  <view class='xiangqing'>
+    <view class='title'>专业方向</view>
+    <view class='lists'>
+      <text wx:for='{{tags}}'>{{item}}</text>
+    </view>
+  </view>
+
+  <view class='xiangqing'>
+    <view class='title'>岗位描述</view>
+    <view class='lists'>
+      <view>{{detail.description?detail.description:"暂无描述"}}</view>
+    </view>
+  </view>
+
+  <ul class='shoucang'>
+    <li bindtap='collect' data-id='0' wx:if='{{flag==0}}'>
+      <image class='icon' src='/static/img/scimg.png'></image>收藏</li>
+    <li bindtap='collect' data-id='1' wx:if='{{flag==1}}'>
+      <image class='icon' src='/static/img/scimg1.png'></image>已收藏</li>
+    <li bindtap='link' data-url='{{detail.seotitle}}'>
+      <image class='icon' src='/static/img/fblj.png'></image>复制链接</li>
+  </ul>
+
+  <button class='share' open-type="share" app-parameter="wechat" binderror="launchAppError" bindtap='share'>分享</button>
+
+
+</div>
+
+<view class='home'>
+  <navigator url='/pages/index/index'>
+    <image src='/static/img/icon9.png'></image>
+  </navigator>
+</view>

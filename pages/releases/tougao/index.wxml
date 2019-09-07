@@ -1,0 +1,24 @@
+<!--pages/releases/tougao/index.wxml-->
+<!--pages/releases/zhaopin/index.wxml-->
+<!--pages/releases/huiyi/index.wxml-->
+<view class='all'>
+   <view class='top'>
+      <image class='icon' mode='widthFix' src='/static/img/tgimg.png'></image>
+      <text>投稿/留言</text>
+   </view>
+
+   <view class='forms'>
+      <view class='list'>
+         <label>标题</label>
+         <input placeholder='请输入标题' bindinput='getitle' value='{{url}}'></input>
+         <label>正文</label>
+         <textarea placeholder='请输入正文内容' bindinput='getcontent'></textarea>
+         <button class='confirm'  bindtap='confirm'>确定</button>
+      </view>
+   </view>
+
+</view>
+<view class='home' bindtap='backhome'>
+  <image src='/static/img/icon9.png'></image>
+</view>
+

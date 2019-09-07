@@ -1,0 +1,46 @@
+<!--pages/releases/myfabu/index.wxml-->
+<!--pages/collection/collection.wxml-->
+<view class='all'>
+  <view class='shadow'></view>
+  <view class='mains'>
+    <view class='tabs'>
+      <text data-index='1' bindtap='tabs' class='{{flag==1?"active":""}}'>发布的会议</text>
+      <text data-index='2' bindtap='tabs' class='{{flag==2?"active":""}}'>发布的招聘</text>
+    </view>
+    <view class='meet_box' wx:if="{{flag == 1}}">
+      <navigator wx:for='{{lists}}' url='/pages/meeting/meetdetails/meetdetails?id={{item.id}}'>
+        <ul class='main'>
+          <li class="meet_tt">{{item.title}}</li>
+          <li>
+            <image mode='widthFix' src='/static/img/rl.png'></image>{{item.time}}</li>
+          <li>
+            <image mode='widthFix' src='/static/img/adress.png'></image>{{item.place}}</li>
+          <li>
+            <image mode='widthFix' src='/static/img/adss.png'></image>{{item.url}}</li>
+          <li>
+            <image mode='widthFix' src='/static/img/bq.png'></image>{{item.subject}}</li>
+        </ul>
+      </navigator>
+    </view>
+
+    <view class='meet_box' wx:if="{{flag == 2}}">
+      <navigator wx:for='{{lists1}}' url='/pages/recruitment/detail/index?id={{item.id}}'>
+        <ul class='main'>
+          <li class="meet_tt">{{item.title}}</li>
+          <li>
+            <image mode='widthFix' src='/static/img/rl.png'></image>{{item.time}}</li>
+          <li>
+            <image mode='widthFix' src='/static/img/adress.png'></image>{{item.price}}</li>
+          <li>
+            <image mode='widthFix' src='/static/img/adss.png'></image>{{item.seotitle}}</li>
+          <li>
+            <image mode='widthFix' src='/static/img/bq.png'></image>{{item.relative}}</li>
+        </ul>
+      </navigator>
+    </view>
+  </view>
+</view>
+
+<view class='home' bindtap='backhome'>
+  <image src='/static/img/icon9.png'></image>
+</view>

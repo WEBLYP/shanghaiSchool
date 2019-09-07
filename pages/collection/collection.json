@@ -1,0 +1,8 @@
+{
+  "navigationBarBackgroundColor": "#61a4ff",
+  "navigationBarTextStyle": "white",
+  "navigationBarTitleText": "个人收藏",
+  "backgroundColor": "#eeeeee",
+  "backgroundTextStyle": "light",
+  "enablePullDownRefresh": true
+}

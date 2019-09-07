@@ -1,0 +1,32 @@
+/**app.wxss**/
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+} 
+.home{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  background-color: #61a4ff;
+  line-height: 80rpx;
+  text-align: center;
+  position: fixed;
+  top: 60%;
+  right: 4%;
+  z-index: 99999;
+}
+.home image{width: 56rpx;height: 56rpx;margin-top: 12rpx;}
+
+.nodata{
+  color: #333;
+  font-size: 28rpx;
+  border-radius: 10rpx
+}
+.all{
+  -webkit-overflow-scrolling: touch;
+}

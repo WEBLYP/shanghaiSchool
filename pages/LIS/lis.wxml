@@ -1,0 +1,19 @@
+<!--pages/LIS/lis.wxml-->
+<view class='all'>
+   <!-- <view class='top'>
+      <image class='icon' mode='widthFix' src='/static/img/lis.png'></image>
+      <text>LIS指数简介</text>
+   </view>
+   <text class='article'>
+      {{text.description}}
+   </text> -->
+
+   <ul class='yeareport'>
+      <li wx:for='{{text.over.data}}' wx:key='{{index}}'><navigator url='/pages/information/detail/index?id={{item.id}}'>{{item.title}}</navigator></li>
+   </ul>
+
+</view>
+
+<view class='home' bindtap='backhome'>
+  <image src='/static/img/icon9.png'></image>
+</view>

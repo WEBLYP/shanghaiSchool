@@ -1,0 +1,62 @@
+/* pages/LIS/lis.wxss */
+
+.all .top .icon {
+  width: 30rpx;
+  margin-right: 20rpx;
+}
+
+.all {
+  height: 100vh;
+  background: #f4f4f4;
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  width: 100%;
+  left: 0;
+  box-sizing: border-box;
+}
+
+.all .top {
+  font-size: 34rpx;
+  display: flex;
+  align-items: center;
+  padding: 15rpx 20rpx 25rpx 20rpx;
+  background-color: #fff;
+  border-bottom: 1rpx solid #e7e7e7;
+}
+
+.all .article {
+  display: block;
+  background: #fff;
+  font-size: 24rpx;
+  padding: 20rpx;
+}
+
+.yeareport {
+  display: flex;
+  align-items: center;
+  padding: 20rpx;
+}
+
+.yeareport navigator {
+  padding: 14rpx 40rpx;
+  border-radius: 10rpx;
+  color: #fff;
+  font-size: 34rpx;
+  text-align: center;
+  margin: 0 10rpx;
+  background-color: #61a4ff;
+  height: 150rpx;
+  overflow: hidden;
+  box-sizing: border-box;
+  text-overflow: ellipsis
+}
+
+.yeareport {
+  flex-wrap: wrap;
+}
+
+.yeareport li {
+  width: 50%;
+  margin-bottom: 20rpx;
+}
